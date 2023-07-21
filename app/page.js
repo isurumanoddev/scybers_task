@@ -15,7 +15,7 @@ export default function Home() {
             <Card className={"  max-w-2xl bg-opacity-90   bg-white  rounded-lg shadow-lg p-8"}>
                 <Text className={" text-black text-4xl text-center font-bold mb-10 animate-pulse"}>Scybers React Task</Text>
 
-                <Subtitle className={"text-sm text-center text-gray-800"}>Powered by Next js ,Tailwind CSS,Material UI ,Tremor 2.0 + More
+                <Subtitle className={"text-sm text-center text-gray-800"}>Powered by Next js ,React js ,Tailwind CSS,Material UI ,Tremor 2.0 + More
                     !</Subtitle>
 
                 <Divider className={"my-10 bg-gray-400 "}/>
