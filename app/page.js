@@ -22,7 +22,7 @@ export default function Home() {
 
 
 
-                <Card  decorationColor="indigo" className="rounded-lg ring-gray-200 bg-gray-50  ">
+                <Card  decorationColor="indigo" className="rounded-lg ring-gray-200 bg-gray-50 shadow  ">
                     <NumberPicker/>
                 </Card>
 

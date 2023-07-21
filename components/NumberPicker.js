@@ -15,7 +15,7 @@ import ColloutCard from "@/components/ColloutCard";
 function NumberPicker() {
 
     const [count, setCount] = useState(0);
-    const [warning, setwarning] = useState(false);
+    const [warning, setWarning] = useState(false);
 
     const {register, handleSubmit, formState: {errors}} = useForm()
 
@@ -29,20 +29,20 @@ function NumberPicker() {
 
     const increment = () => {
         if (count < 10) {
-            setCount((number) => number + 1);
-              setwarning(false)
+            setCount((number) => Number(number) + 1);
+            setWarning(false)
         } else {
-            setwarning(true)
+            setWarning(true)
         }
 
-    }
+    };
     const decrement = () => {
         if (count > 0) {
 
-            setCount((number) => number - 1);
-             setwarning(false)
+            setCount((number) => Number(number) - 1);
+            setWarning(false)
         } else {
-            setwarning(true)
+            setWarning(true)
         }
     }
 
@@ -51,23 +51,31 @@ function NumberPicker() {
         <div className={"space-y-4"}>
 
             <div className={"space-y-2 flex flex-col justify-center items-center"}>
-
-                <DisplayNumber value={count}/>
-                {
-                    warning &&
+                <div className={'flex flex-col justify-center items-center relative w-full pt-4'}>
+                    <DisplayNumber value={count}/>
+                    {
+                        warning &&
                         <ColloutCard message={"Enter number between 0 - 10 "} warning/>
-                }
+                    }
+                </div>
+
                 <div className={"flex justify-center   items-center relative p-3 border-t-2 gap-5"}>
 
                     <IconButton
                         onClick={increment}
+                        size={'large'}
+                         color="primary"
+                        variant="contained"
 
-                        className={" bg-gray-700 text-white hover:bg-gray-600 rounded-full"}><Add
+                        className={" bg-gray-700 text-white hover:bg-gray-600 rounded-full"}><Add  sx={{ fontSize: 60 }}
                         className={'text-5xl p-2'}/></IconButton>
                     <IconButton
+                        color="primary"
+                        size={'large'}
                         onClick={decrement}
+                        variant="contained"
 
-                        className={" bg-gray-700 text-white hover:bg-gray-600 rounded-full"}><Remove
+                        className={" bg-gray-700 text-white hover:bg-gray-600 rounded-full"}><Remove  sx={{ fontSize: 60 }}
                         className={'text-5xl p-2'}/></IconButton>
 
 
@@ -83,7 +91,8 @@ function NumberPicker() {
 
                     />
 
-                    <Button className={"w-full bg-gray-700 text-white hover:bg-gray-600"} type="submit">Submit</Button>
+                    <Button  color="primary"  variant="contained" className={"w-full bg-gray-700 text-white hover:bg-gray-600"}
+                            type="submit">Submit</Button>
                 </form>
 
 
