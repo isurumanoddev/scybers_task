@@ -23,6 +23,12 @@ function NumberPicker() {
         console.log("Number ", data.number);
         setCount(data.number)
 
+        if (data.number > 0 || data.number < 10) {
+            setWarning(false);
+        } else {
+            setWarning(true)
+        }
+
     }
     console.log("errors ", errors);
 
@@ -67,7 +73,7 @@ function NumberPicker() {
                          color="primary"
                         variant="contained"
 
-                        className={" bg-gray-700 text-white hover:bg-gray-600 rounded-full"}><Add  sx={{ fontSize: 60 }}
+                        className={"    rounded-full"}><Add color="primary"  sx={{ fontSize: 60 }}
                         className={'text-5xl p-2'}/></IconButton>
                     <IconButton
                         color="primary"
@@ -75,7 +81,7 @@ function NumberPicker() {
                         onClick={decrement}
                         variant="contained"
 
-                        className={" bg-gray-700 text-white hover:bg-gray-600 rounded-full"}><Remove  sx={{ fontSize: 60 }}
+                        className={"    rounded-full"}><Remove color="primary"  sx={{ fontSize: 60 }}
                         className={'text-5xl p-2'}/></IconButton>
 
 
