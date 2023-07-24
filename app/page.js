@@ -34,7 +34,7 @@ export default function Home() {
                 <Divider className={"my-10 bg-gray-400 "}/>
 
 
-                <Card decorationColor="indigo" className="rounded-lg ring-gray-200 bg-white shadow  ">
+                <Card decorationColor="indigo" className="rounded-lg ring-gray-200 bg-white/60 shadow  ">
                     <NumberPicker/>
                 </Card>
 
