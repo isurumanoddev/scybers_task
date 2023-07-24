@@ -7,7 +7,7 @@ function Input({id, label, type, errors, register}) {
         <div className={"w-full relative pb-7"}>
             <input id={id}
 
-                   {...register("number", {required: true, max: 9, min: 0})}
+                   {...register("number", {required: true, max:10, min: 0})}
                    placeholder={" "}
                    type={type}
                    className={`   peer w-full text-3xl text-gray-900 p-4 pt-10 font-semibold bg-white border-2 rounded-md outline-none transition ${errors[id] ? 'border-rose-500' : 'border-neutral-300'} ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}`}
@@ -17,7 +17,7 @@ function Input({id, label, type, errors, register}) {
             {/*    errors &&  <label className={"text-3xl"}>{errors[id]}</label>*/}
             {/*}*/}
 
-            {errors.number && <p className={'text-rose-500 font-semibold text-sm  absolute bottom-0'}>Enter number between 0 - 10</p>}
+            {errors.number && <p className={'text-rose-500 font-semibold text-[10px] md:text-sm  absolute bottom-0'}>Enter number between 0 - 10</p>}
             <label
                 className={`
           absolute 

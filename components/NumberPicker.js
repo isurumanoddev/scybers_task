@@ -70,18 +70,18 @@ function NumberPicker() {
                     <IconButton
                         onClick={increment}
                         size={'large'}
-                         color="primary"
+                         color="warning"
                         variant="contained"
 
-                        className={"    rounded-full"}><Add color="primary"  sx={{ fontSize: 60 }}
+                        className={"    rounded-full"}><Add color="warning"  sx={{ fontSize: 60 }}
                         className={'text-5xl p-2'}/></IconButton>
                     <IconButton
-                        color="primary"
+                        color="warning"
                         size={'large'}
                         onClick={decrement}
                         variant="contained"
 
-                        className={"    rounded-full"}><Remove color="primary"  sx={{ fontSize: 60 }}
+                        className={"    rounded-full"}><Remove color="warning"  sx={{ fontSize: 60 }}
                         className={'text-5xl p-2'}/></IconButton>
 
 
@@ -97,7 +97,7 @@ function NumberPicker() {
 
                     />
 
-                    <Button  color="primary"  variant="contained" className={"w-full bg-gray-700 text-white hover:bg-gray-600"}
+                    <Button  color="warning"  variant="contained" className={"w-full bg-gray-700 text-white hover:bg-gray-600"}
                             type="submit">Submit</Button>
                 </form>
 
